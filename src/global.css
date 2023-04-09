@@ -36,66 +36,84 @@ a {
   grid-template-columns: 300px 1fr;
 }
 
-.sidebar {
+.content {
+  border-left: 1px solid #2F2F2F;
+  border-right: 1px solid #2F2F2F;
+}
+
+.timeline-header {
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-bottom: 1px solid #2f2f2f;
+}
+
+.timeline-header svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--twitter-blue);
+}
+
+.new-tweet-form {
   padding: 1.5rem 1.25rem;
 
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: .5rem;
 }
 
-.sidebar .logo {
-  width: 2rem;
-  height: 2rem;
-}
-
-.sidebar .new-tweet {
-  background: var(--twitter-blue);
-  border-radius: 999px;
-  padding: 1rem;
-
+.new-tweet-form label {
   display: flex;
-  justify-content: center; 
-
-  width: 100%;
-  color: #FFFFFF;
-  font-size: 1.25rem;
-  font-weight: 900;
-
-  border: 0;
-
-  transition: all .2s;
+  gap: 0.75rem;
 }
 
-.sidebar .new-tweet:hover {
+.new-tweet-form label img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+}
+
+.new-tweet-form label textarea {
+  flex: 1;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: .75rem;
+
+  background: transparent;
+  color: #828282;
+  resize: none;
+}
+
+.new-tweet-form label textarea:focus {
+  outline: none;
+}
+
+.new-tweet-form label textarea::placeholder {
+  color: #828282;
+}
+
+.new-tweet-form button[type=submit] {
+  margin-left: auto;
+  background: var(--twitter-blue);
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 900;
+  border: 0;
+}
+
+.new-tweet-form button[type=submit]:hover {
   filter: brightness(0.9);
 }
 
-.main-navigation {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.main-navigation a {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  font-size: 1.25rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.main-navigation a svg {
-  width: 2rem;
-  height: 2rem;
-}
-
-.main-navigation .active {
-  color: var(--twitter-blue);
-}
-
-.content {
-  border-left: 1px solid #2F2F2F;
-  border-right: 1px solid #2F2F2F;
+.separator {
+  background: #202020;
+  border-top: 1px solid #2F2F2F;
+  border-bottom: 1px solid #2F2F2F;
+  height: 0.75rem;
 }

@@ -1,61 +1,39 @@
-import {
-  Bell,
-  BookmarkSimple,
-  DotsThreeCircle,
-  Envelope,
-  FileText,
-  Hash,
-  House,
-  User,
-} from 'phosphor-react'
-
-import LogoImg from './assets/Logo.svg'
+import { Sparkle } from 'phosphor-react'
+import { Tweet } from './components/Tweet'
+import { Sidebar } from './components/Sidebar'
 
 export function App() {
   return (
     <div className="layout">
-      <aside className="sidebar">
-        <img className="logo" src={LogoImg} alt="Logo" />
+      <Sidebar />
 
-        <nav className="main-navigation">
-          <a className="active" href="">
-            <House weight="fill" /> Home
-          </a>
-          <a href="">
-            <Hash />
-            Explorer
-          </a>
-          <a href="">
-            <Bell />
-            Notifications
-          </a>
-          <a href="">
-            <Envelope />
-            Messages
-          </a>
-          <a href="">
-            <BookmarkSimple />
-            Bookmarks
-          </a>
-          <a href="">
-            <FileText />
-            Lists
-          </a>
-          <a href="">
-            <User />
-            Profile
-          </a>
-          <a href="">
-            <DotsThreeCircle />
-            More
-          </a>
-        </nav>
+      <div className="content">
+        <main className="timeline">
+          <div className="timeline-header">
+            Home
+            <Sparkle />
+          </div>
 
-        <button className="new-tweet" type="button">
-          Tweet
-        </button>
-      </aside>
-      <div className="content">content</div>
+          <form className="new-tweet-form">
+            <label htmlFor="tweet">
+              <img
+                src="https://github.com/marlisonmourao.png"
+                alt="image user"
+              />
+              <textarea id="tweet" placeholder="What's happening" />
+            </label>
+
+            <button type="submit">Tweet</button>
+          </form>
+
+          <div className="separator" />
+
+          <Tweet />
+          <Tweet />
+          <Tweet />
+          <Tweet />
+        </main>
+      </div>
     </div>
   )
 }
