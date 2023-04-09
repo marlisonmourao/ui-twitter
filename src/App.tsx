@@ -1,6 +1,7 @@
-import { Sparkle } from 'phosphor-react'
 import { Tweet } from './components/Tweet'
 import { Sidebar } from './components/Sidebar'
+import { Header } from './components/Header'
+import { Separator } from './components/Separator'
 
 export function App() {
   return (
@@ -9,10 +10,7 @@ export function App() {
 
       <div className="content">
         <main className="timeline">
-          <div className="timeline-header">
-            Home
-            <Sparkle />
-          </div>
+          <Header title="Home" />
 
           <form className="new-tweet-form">
             <label htmlFor="tweet">
@@ -26,7 +24,7 @@ export function App() {
             <button type="submit">Tweet</button>
           </form>
 
-          <div className="separator" />
+          <Separator />
 
           <Tweet />
           <Tweet />
