@@ -12,6 +12,7 @@ import {
 import LogoImg from '../assets/Logo.svg'
 
 import './Sidebar.css'
+import { NavLink } from 'react-router-dom'
 
 export function Sidebar() {
   return (
@@ -19,9 +20,9 @@ export function Sidebar() {
       <img className="logo" src={LogoImg} alt="Logo" />
 
       <nav className="main-navigation">
-        <a className="active" href="">
+        <NavLink to="/">
           <House weight="fill" /> Home
-        </a>
+        </NavLink>
         <a href="">
           <Hash />
           Explorer
