@@ -4,6 +4,7 @@ import { Separator } from '../components/Separator'
 import { Tweet } from '../components/Tweet'
 
 import './Status.css'
+import { PaperPlaneRight } from 'phosphor-react'
 
 export function Status() {
   const [newAnswers, setNewAnswers] = useState('')
@@ -47,7 +48,10 @@ export function Status() {
           />
         </label>
 
-        <button type="submit">Tweet</button>
+        <button type="submit">
+          <PaperPlaneRight />
+          <span>Answer</span>
+        </button>
       </form>
 
       {answers.map((tweet) => (
